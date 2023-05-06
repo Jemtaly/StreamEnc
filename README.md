@@ -6,6 +6,15 @@ StreamEnc is an encryption tool for streaming media that allows users to encrypt
 
 ## Usage
 
+- Install required packages
+
+  ```
+  pip install pycryptodome
+  pip install numpy
+  pip install Pillow
+  pip install opencv-python
+  ```
+
 - Server Side
 
   ```
