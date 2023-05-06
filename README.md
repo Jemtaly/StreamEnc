@@ -16,14 +16,15 @@ StreamEnc is an encryption tool for streaming media that allows users to encrypt
   Optional arguments
   
   -S WIDTH HEIGHT  size of encrypted video in pixels (320x180 as default, which
-                   in my experiments is the best result in bilibili's live stream
-                   (since the live screen will be compressed, a higher resolution
-                   may instead result in a more illegible decrypted screen))
+                   in my experiments worked the best result in bilibili's live
+                   stream (since the live screen will be compressed, a higher
+                   resolution may instead result in a more illegible decrypted
+                   screen))
   
   -l LEN           side length corresponding to one bit in the nonce marker (in
                    pixels in the encrypted video) (1 as default, but I recommend
-                   setting this to an upward rounding of HEIGHT/200, e.g. with -S
-                   as the default value, this should be set to 2)
+                   setting this to an upward rounding of HEIGHT/200, e.g. with
+                   -S as the default value, this should be set to 2)
   ```
 
   Also, note that in order to be able to decrypt the video correctly on the client side, the input video should be in the same scale as the client's monitor and preferably at the same resolution.
