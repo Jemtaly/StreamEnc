@@ -9,10 +9,10 @@ StreamEnc is an encryption tool for streaming media that allows users to encrypt
 - Server Side
 
   ```
-  python3 streamenc.py -s your/video/to/encrypt.mp4 -d enc.mp4 -k 12345678abcdef12345678abcdef
+  python3 streamenc.py -s your/video/to/encrypt.xxx -d out.avi -k 12345678abcdef12345678abcdef
   ```
 
-  Encrypt your/video/to/encrypt.mp4 to out.avi using AES-128 CTR mode with `12345678abcdef12345678abcdef` as the key.
+  Encrypt your/video/to/encrypt.xxx (in any format) to out.avi using AES-128 CTR mode with `12345678abcdef12345678abcdef` as the key.
 
   ```
   Optional arguments:
