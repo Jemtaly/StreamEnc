@@ -15,7 +15,7 @@ StreamEnc is an encryption tool for streaming media that allows users to encrypt
   Encrypt your/video/to/encrypt.mp4 to out.avi using AES-128 CTR mode with `12345678abcdef12345678abcdef` as the key.
 
   ```
-  Optional arguments
+  Optional arguments:
   
   -S WIDTH HEIGHT  size of encrypted video in pixels (320x180 as default, which
                    in my experiments worked the best result in bilibili's live
