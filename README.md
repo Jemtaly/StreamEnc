@@ -59,4 +59,7 @@ StreamEnc is an encryption tool for streaming media that allows users to encrypt
 - Why not just encrypt each pixel at the resolution of the input video, but reduce the video resolution first?
   
   Also because the video is compressed when it is transferred (and saved). If I directly encrypt the 4k video you input, every pixel of the encrypted video will be very blurry after streaming, and the effect after decryption will be terrible, and reducing the resolution to 320x180 is equivalent to increasing The amount of redundant information is reduced, so as to avoid losing too much effective information during transmission.
+  
+- What if the decrypted image is in chaos?
 
+  If the decrypted image is not clear enough, try different -S argument (the aspect ratio should be consistent with the client's screen ratio and the original video ratio). If the decrypted image cannot identify anything at all, first check whether the -S, -l and -k arguments selected by the server and the client are the same, and then make sure that the client video is full screen (no black border), and the Nonce marker in the upper left corner is not blocked by other windows.
