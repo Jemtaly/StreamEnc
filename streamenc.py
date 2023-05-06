@@ -51,11 +51,11 @@ def main():
     import argparse
     parser = argparse.ArgumentParser()
     parser = argparse.ArgumentParser(description = 'Video Encrypter/Decrypter')
-    parser.add_argument('-k', '--key', type = bytes, default = bytes(16), help = 'key (16/24/32 bytes)')
+    parser.add_argument('-k', '--key', type = bytes.fromhex, default = bytes(16), help = '16/24/32-byte key in hex')
     parser.add_argument('-s', '--src', type = str, default = None, help = 'source file')
-    parser.add_argument('-d', '--dst', type = str, default = 'out.avi', help = 'destination file')
-    parser.add_argument('-S', '--size', type = int, nargs = 2, default = (320, 180), help = 'video size in pixels (width, height)')
-    parser.add_argument('-l', '--len', type = int, default = 1, help = 'side length of single nonce bit in pixels')
+    parser.add_argument('-d', '--dst', type = str, default = 'out.avi', help = 'destination file (default: out.avi)')
+    parser.add_argument('-S', '--size', type = int, nargs = 2, default = (320, 180), metavar = ('WIDTH', 'HEIGHT'), help = 'size of encrypted video in pixels (default: 320x180)')
+    parser.add_argument('-l', '--len', type = int, default = 1, help = 'side length corresponding to one bit in the nonce marker (in pixels in the encrypted video)')
     args = parser.parse_args()
     if args.src:
         generate(args.key, args.src, args.dst, args.size, args.len)
