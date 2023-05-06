@@ -2,6 +2,8 @@
 
 StreamEnc is an encryption tool for streaming media that allows users to encrypt a video on the server side into another secret video that can be streamed, and decrypt the original video directly on the client side.
 
+![example](https://user-images.githubusercontent.com/83796250/236632203-cb979b2d-0e96-4c14-9792-2769010e97cc.png)
+
 ## Usage
 
 - Server Side
@@ -40,8 +42,6 @@ StreamEnc is an encryption tool for streaming media that allows users to encrypt
   ```
 
   The decrypted video will be displayed in the small pop-up window.
-
-![example](https://user-images.githubusercontent.com/83796250/236632203-cb979b2d-0e96-4c14-9792-2769010e97cc.png)
 
 ## FAQ
 
