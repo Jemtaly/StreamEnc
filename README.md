@@ -41,7 +41,7 @@ StreamEnc is an encryption tool for streaming media that allows users to encrypt
   python3 streamenc.py -k 12345678abcdef12345678abcdef
   ```
 
-  The decrypted video will be displayed in the small pop-up window.
+  The decrypted video will be displayed in the small pop-up window. If you want to exit, press <kbd>q</kbd>.
 
 ## FAQ
 
