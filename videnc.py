@@ -45,7 +45,8 @@ def screen(key, size, len):
         iSrc = ImageGrab.grab()
         iDst = decrypt(key, iSrc.resize(size), len)
         cv2.imshow('Decrypter', cv2.cvtColor(np.array(iDst), cv2.COLOR_RGB2BGR))
-        if cv2.waitKey(1) == ord('q'):
+        cv2.waitKey(1)
+        if cv2.getWindowProperty('Decrypter', cv2.WND_PROP_VISIBLE) < 1:
             break
 def main():
     import argparse
