@@ -26,8 +26,8 @@ StreamEnc is an encryption tool for streaming media that allows users to encrypt
   ```
   Optional arguments:
   
-  -S WIDTH HEIGHT  size of encrypted video in pixels (320x180 as default, which
-                   in my experiments worked the best result in bilibili's live
+  -r WIDTH HEIGHT  resolution of encrypted video (320x180 as default, which in
+                   my experiments worked the best result in bilibili's live
                    stream (since the live screen will be compressed, a higher
                    resolution may instead result in a more illegible decrypted
                    screen))
@@ -44,7 +44,7 @@ StreamEnc is an encryption tool for streaming media that allows users to encrypt
 
 - Client Side
 
-  Open the stream and play it full screen (at the top of the main monitor), then run the following command: (the -k, -S, -l arguments need to be the same as on the server side)
+  Open the stream and play it full screen (at the top of the main monitor), then run the following command: (the -k, -r, -l arguments need to be the same as on the server side)
 
   ```
   python3 videnc.py -k 12345678abcdef12345678abcdef
@@ -72,4 +72,4 @@ StreamEnc is an encryption tool for streaming media that allows users to encrypt
   
 - What if the decrypted image is in chaos?
 
-  If the decrypted image is not clear enough, try different -S argument (the aspect ratio should be consistent with the client's screen ratio and the original video ratio). If the decrypted image cannot identify anything at all, first check whether the -S, -l and -k arguments selected by the server and the client are the same, and then make sure that the client video is full screen (no black border), and the Nonce marker in the upper left corner is not blocked by other windows.
+  If the decrypted image is not clear enough, try different -S argument (the aspect ratio should be consistent with the client's screen ratio and the original video ratio). If the decrypted image cannot identify anything at all, first check whether the -r, -l and -k arguments selected by the server and the client are the same, and then make sure that the client video is full screen (no black border), and the Nonce marker in the upper left corner is not blocked by other windows.
