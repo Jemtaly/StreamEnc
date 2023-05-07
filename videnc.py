@@ -49,7 +49,6 @@ class Decrypter(tk.Tk):
         self.res = res
         self.len = len
         self.title('Video Decrypter')
-        self.attributes("-topmost", True)
         self.overrideredirect(True)
         self.geometry('-0-0')
         self.bind('<Escape>', lambda e: self.quit())
@@ -64,6 +63,7 @@ class Decrypter(tk.Tk):
     def drag(self, e):
         self.geometry('+%d+%d' % (self.winfo_pointerx() - self.x, self.winfo_pointery() - self.y))
     def refresh(self):
+        self.attributes("-topmost", True)
         iSrc = ImageGrab.grab()
         iDst = decrypt(self.key, iSrc.resize(self.res), self.len)
         self.label.imgtk = ImageTk.PhotoImage(iDst)
