@@ -51,7 +51,7 @@ class Decrypter(tk.Tk):
         self.title('Video Decrypter')
         self.overrideredirect(True)
         self.geometry('-0-0')
-        self.bind('<Escape>', lambda e: self.quit())
+        self.bind('<Button-3>', lambda e: self.quit())
         self.bind('<Button-1>', self.click)
         self.bind('<B1-Motion>', self.drag)
         self.label = tk.Label(self)
